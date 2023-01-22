@@ -1,0 +1,153 @@
+@media (orientation:landscape) {
+    :root {
+        --width-left: 53%;
+        --width-right: 47%;
+        --height-header-left: 14.5vw;
+        --height-header-right: 14.5vw;
+        --width-rightpad: 80%;
+        --padding-td: 0.3rem;
+    }
+
+    html {
+        font-size: 1vw;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .leftpanel {
+        width: var(--width-left);
+        height: 100%;
+        top: 0;
+    }
+
+    .data {
+        position: absolute;
+        height: calc(100vh - var(--height-header-left));
+        top: var(--height-header-left);
+        overflow: auto;
+    }
+
+    .rightpanel {
+        width: var(--width-right);
+        height: 100%;
+        left: var(--width-left);
+        top: 0;
+    }
+
+    .descholder {
+        width: 100%;
+        height: var(--height-header-right);
+        position: relative;
+        padding: 2% 27% 0 0;
+        top: 0;
+        right: 0;
+        background-color: white;
+        z-index: 1;
+        text-align: right;
+    }
+
+    #rightpad {
+        width: var(--width-rightpad);
+        height: calc(100vh - var(--height-header-right));
+        position: absolute;
+        left: 3%;
+        top: var(--height-header-right);
+        padding: 0 0 2rem 0;
+        border: none;
+        overflow: auto;
+        display: block;
+        overflow-y: scroll;
+    }
+
+    .footer {
+        width: calc(var(--width-right) * 0.85);
+	left: var(--width-left);
+    }
+
+    .ulog {
+        opacity: 1.;
+        padding: 0.7rem;
+        top: 1rem;
+        right: 0.2rem;
+        width: 12rem;
+        height: 10rem;
+    }
+    
+    .btnaction:hover {
+        background-color: var(--blue);
+        color: white;
+    }
+    .btncheck {
+        transition: opacity 0.3s ease;
+    }
+    tr:hover {
+        background-color: var(--gray);
+        transition: background-color 0.2s;
+    }
+}
+
+@media (orientation:portrait) {
+    :root {
+        --height-right: 63vw;
+        --width-rightpad: 85%;
+        --padding-td: 0.18rem;
+    }
+
+    html {
+        font-size: 2.7vw;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .leftpanel {
+        width: 100%;
+        height: calc(100vh - var(--height-right));
+        top: var(--height-right);
+        overflow: auto;
+    }
+
+    .rightpanel {
+        width: 100%;
+        height: var(--height-right);
+        left: 0;
+        top: 0;
+    }
+
+    .descholder {
+        text-align: center;
+    }
+
+    #rightpad {
+        width: var(--width-rightpad);
+        position: relative;
+        margin: 0 auto;
+        border: none;
+        overflow: auto;
+        display: block;
+        background-color: white;
+        text-align: center;
+        /* padding-bottom: 3vw; */
+    }
+
+    .footer {
+        width: 100%;
+        left: 0;
+    }    
+
+    .ulog {
+        opacity: 1;
+        padding: 2rem;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .hideinmobile {
+        display: none;
+    }
+}

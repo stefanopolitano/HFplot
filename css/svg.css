@@ -1,0 +1,9 @@
+svg {
+}
+
+.grid path,
+.grid line
+{
+    stroke: black;
+    stroke-dasharray: 2,4;
+}
